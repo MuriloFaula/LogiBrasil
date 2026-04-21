@@ -1,0 +1,6 @@
+com\mycompany\logibrasil\LogiBrasil.class
+com\mycompany\logibrasil\model\Setor.class
+com\mycompany\logibrasil\model\Pilha.class
+com\mycompany\logibrasil\relatorio\Dashboard.class
+com\mycompany\logibrasil\armazem\Armazem.class
+com\mycompany\logibrasil\model\Caixa.class
