@@ -24,7 +24,7 @@ public class Dashboard {
                 System.out.println(setor);
                 
                 if (ocupacao > 80) {
-                    System.out.println("⚠ ️ALERTA: Setor acima de 80%!");
+                    System.out.println("[ALERTA] Setor acima de 80% da capacidade!");
                 }
             }
         }
