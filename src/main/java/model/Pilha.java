@@ -1,17 +1,17 @@
 
-package com.mycompany.logibrasil.model;
+package model;
 
 public class Pilha {
     
-    private Caixa[] elementos;
+    private CaixaMedicamento[] elementos;
     
     private int topo;
     private int capacidade;
     
-    //Criamos o construtor das pilhas de caixa
+    //Criamos o construtor das pilhas de caixa de medicamento
     public Pilha (int capacidade){
         this.capacidade = capacidade;
-        this.elementos = new Caixa[capacidade];
+        this.elementos = new CaixaMedicamento[capacidade];
         this.topo = -1;
     }
     
@@ -26,23 +26,25 @@ public class Pilha {
     }
     
     //metodo para empilhar
-    public boolean empilhar(Caixa caixa){
+    public boolean empilhar(CaixaMedicamento caixaMedicamento){
         if (estaCheia()){ 
             return false; 
         }
-        elementos[++topo] = caixa;
+        elementos[++topo] = caixaMedicamento;
         return true;
     }
     
     //metodo para desempilhar
-    public Caixa desempilhar(){
+    public CaixaMedicamento desempilhar(){
         if (estaVazia()) {
             return null;
         }
-        return elementos[topo--];
+         CaixaMedicamento removido = elementos[topo];
+        elementos[topo--] = null;
+        return removido;
     }
     
-    public Caixa verTopo(){
+    public CaixaMedicamento verTopo(){
         if (estaVazia()) {
             return null;
         }
@@ -57,7 +59,7 @@ public class Pilha {
         return topo +1;
     }
     
-    public Caixa[] getElementos(){
+    public CaixaMedicamento[] getElementos(){
         return elementos;
     }
     
